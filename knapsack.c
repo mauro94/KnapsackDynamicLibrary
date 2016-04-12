@@ -8,6 +8,11 @@ int max(int a, int b) {
 }
 
 // Returns the maximum value that can be put in a knapsack of capacity W
+// Parameters:
+// W : Sack capacity (max weight)
+// wt[] : List of item weights
+// val[] : List of item values
+// n : Amount of items in lists
 int knapSack(int W, int wt[], int val[], int n)
 {
     int i, w;
