@@ -1,0 +1,28 @@
+progava@ProgAva:~$ ls
+Bibliotecas                      Pictures
+Desktop                          Procesos
+Documents                        Public
+Downloads                        Seniales
+examples.desktop                 Templates
+inspector_xe_2011_uninstall.log  Videos
+intel                            vtune_amplifier_xe_2011_install.log
+Music                            vtune_amplifier_xe_2011_uninstall.log
+progava@ProgAva:~$ cd Desktop
+progava@ProgAva:~/Desktop$ ls
+AgentData.txt  knapsack.c            Mission5_A01191903.c    terminal_Mission5
+a.out          Mission3_A01191903.c  Mission5_A01191903.out
+progava@ProgAva:~/Desktop$ gcc -c -fPIC knapsack.c -o knapsack.o
+progava@ProgAva:~/Desktop$ gcc -shared -o libknapsack.so knapsack.o
+progava@ProgAva:~/Desktop$ gcc -o test main.c -lknapsack -L/home/progava/Desktopmain.c:10:22: fatal error: knapsack.h: No such file or directory
+compilation terminated.
+progava@ProgAva:~/Desktop$ gcc -o test main.c -lknapsack -L/home/progava/Desktopprogava@ProgAva:~/Desktop$ ldd test
+	linux-gate.so.1 =>  (0x008e0000)
+	libknapsack.so => not found
+	libc.so.6 => /lib/i386-linux-gnu/libc.so.6 (0x00179000)
+	/lib/ld-linux.so.2 (0x006e6000)
+progava@ProgAva:~/Desktop$ export LD_LIBRARY_PATH=ḥomefḷib
+progava@ProgAva:~/Desktop$ export LD_LIBRARY_PATH=.
+progava@ProgAva:~/Desktop$ export LD_LIBRARY_PATH=/opt/lib:$LD_LIBRARY_PATH
+progava@ProgAva:~/Desktop$ gcc -o test main.c -lknapsack -L/home/progava/Desktopprogava@ProgAva:~/Desktop$ ./test
+220progava@ProgAva:~/Desktop$ 
+
